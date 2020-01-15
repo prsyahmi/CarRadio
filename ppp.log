@@ -1,0 +1,244 @@
+Jan 1, 2018 9:41:34 AM
+
+Total RAM: 1027 MB. Available RAM: 582 MB
+
+Trying to apply permanent port setting changes
+Starting modem command sequence (Dial) ...
+>
+ATE0
+>
+ATE0
+>
+ATE0
+>
+ATE0
+>
+ATE0
+>
+ATE0
+>
+ATE0
+>
+ATE0
+>
+ATE0
+>
+ATE0
+>
+ATE0
+>
+ATE0
+>
+ATE0
+New device on /dev/bus/usb/003/005
+ Class of interface 0 is 0x08
+Looking at USB device 12d1:1f01 with class 8
+ Device top dir: /sys/bus/usb/devices/3-1, active cfg: 1
+Active configuration ID: 1
+Device layout (config 1) - cl:00  sc:00  pr:00
+ if:0 as:0 -  cl:08  sc:06  pr:50 -  bi:81  bo:01
+
+Found 0 serial ports
+No dedicated modem port found
+Trying to switch mode of USB device 12d1:1f01 ...
+Device info:
+ VID=	 12d1
+ PID=	 1f01
+ Manufact.= HUAWEI_MOBILE
+   Product= HUAWEI_MOBILE
+Found matching configuration in collection: 12d1.#android
+Go for alternate Huawei mode as configured ...
+Wait for 200 ms
+Bulk message 1: 55534243123456780000000000000011062000000101010100000000000000
+  transmitted
+>
+ATE0
+New device on /dev/bus/usb/003/006
+ Class of interface 0 is 0x02
+Looking at USB device 12d1:14db with class 2
+ Device top dir: /sys/bus/usb/devices/3-1, active cfg: 1
+Active configuration ID: 1
+Device layout (config 1) - cl:02  sc:00  pr:00
+ if:0 as:0 -  cl:02  sc:06  pr:00 -  ir:83
+ if:1 as:0 -  cl:0a  sc:06  pr:00 -  bi:82  bo:02
+
+Found 0 serial ports
+Opening port type ECM (interface 0)
+Jan 1, 2018 9:41:48 AM
+
+Total RAM: 1027 MB. Available RAM: 581 MB
+
+
+Starting DHCP request ...
+> Phase 3
+ffffffffffff0c5b8f279a64080045100148000000008011399600000000ffffffff004400430134
+<
+ffffffffffffe4a7c58e8d7f080045000116000000004011b12ec0a80801ffffffff004300440102
+NAK received
+> Phase 1
+ffffffffffff0c5b8f279a64080045100148000000008011399600000000ffffffff004400430134
+<
+0c5b8f279a64e4a7c58e8d7f08004500013e000000004011b106c0a80801ffffffff00430044012a
+OFFER received
+> Phase 3
+e4a7c58e8d7f0c5b8f279a64080045100148000000008011399600000000ffffffff004400430134
+<
+0c5b8f279a64e4a7c58e8d7f08004500013e000000004011b106c0a80801ffffffff00430044012a
+ACK received
+> Phase 9
+ffffffffffff0c5b8f279a64080600010800060400010c5b8f279a64c0a80864000000000000c0a8
+<  (ARP, connection confirmed)
+0c5b8f279a64e4a7c58e8d7f08060001080006040002e4a7c58e8d7fc0a808010c5b8f279a64c0a8
+Local IP: 192.168.8.100/24
+ Peer IP: 192.168.8.1
+    DNS1: 192.168.8.1
+    DNS2: 
+
+Send initial IP packet ...
+>
+ATE0
+First IP packet received - we are online
+
+End of DHCP negotiation
+VPN setup complete
+VPN network device is up
+Network notification disabled (limited access)
+
+Connection is ready
+Jan 1, 2018 9:41:50 AM
+
+Total RAM: 1027 MB. Available RAM: 581 MB
+
+No modem reply
+====
+
+Jan 1, 2018 10:02:18 AM
+
+Total RAM: 1027 MB. Available RAM: 616 MB
+
+
+Starting DHCP request ...
+> Phase 3
+ffffffffffff0c5b8f279a64080045100148000000008011399600000000ffffffff004400430134
+<
+ffffffffffffe4a7c58e8d7f080045000116000000004011b12ec0a80801ffffffff004300440102
+NAK received
+> Phase 1
+ffffffffffff0c5b8f279a64080045100148000000008011399600000000ffffffff004400430134
+<
+0c5b8f279a64e4a7c58e8d7f08004500013e000000004011b106c0a80801ffffffff00430044012a
+OFFER received
+> Phase 3
+e4a7c58e8d7f0c5b8f279a64080045100148000000008011399600000000ffffffff004400430134
+<
+0c5b8f279a64e4a7c58e8d7f08004500013e000000004011b106c0a80801ffffffff00430044012a
+ACK received
+> Phase 9
+ffffffffffff0c5b8f279a64080600010800060400010c5b8f279a64c0a80864000000000000c0a8
+<  (ARP, connection confirmed)
+0c5b8f279a64e4a7c58e8d7f08060001080006040002e4a7c58e8d7fc0a808010c5b8f279a64c0a8
+Local IP: 192.168.8.100/24
+ Peer IP: 192.168.8.1
+    DNS1: 192.168.8.1
+    DNS2: 
+
+Send initial IP packet ...
+No IP reply for 3 seconds. Just assume we are online
+
+End of DHCP negotiation
+VPN setup complete
+VPN network device is up
+Network notification disabled (limited access)
+
+Connection is ready
+Jan 1, 2018 8:20:36 AM
+
+Total RAM: 1027 MB. Available RAM: 654 MB
+
+
+Starting DHCP request ...
+> Phase 3
+ffffffffffff0c5b8f279a64080045100148000000008011399600000000ffffffff004400430134
+USB communication disrupted; abort
+Jan 1, 2018 8:20:58 AM
+
+Total RAM: 1027 MB. Available RAM: 651 MB
+
+
+Starting DHCP request ...
+> Phase 3
+ffffffffffff0c5b8f279a64080045100148000000008011399600000000ffffffff004400430134
+<
+ffffffffffffe4a7c58e8d7f080045000116000000004011b12ec0a80801ffffffff004300440102
+NAK received
+> Phase 1
+ffffffffffff0c5b8f279a64080045100148000000008011399600000000ffffffff004400430134
+<
+0c5b8f279a64e4a7c58e8d7f08004500013e000000004011b106c0a80801ffffffff00430044012a
+OFFER received
+> Phase 3
+e4a7c58e8d7f0c5b8f279a64080045100148000000008011399600000000ffffffff004400430134
+<
+0c5b8f279a64e4a7c58e8d7f08004500013e000000004011b106c0a80801ffffffff00430044012a
+ACK received
+> Phase 9
+ffffffffffff0c5b8f279a64080600010800060400010c5b8f279a64c0a80864000000000000c0a8
+<  (ARP, connection confirmed)
+0c5b8f279a64e4a7c58e8d7f08060001080006040002e4a7c58e8d7fc0a808010c5b8f279a64c0a8
+Local IP: 192.168.8.100/24
+ Peer IP: 192.168.8.1
+    DNS1: 192.168.8.1
+    DNS2: 
+
+Send initial IP packet ...
+First IP packet received - we are online
+
+End of DHCP negotiation
+VPN setup complete
+VPN network device is up
+Network notification accepted after 0 ms
+
+Connection is ready
+Jan 1, 2018 8:28:16 AM
+
+Total RAM: 1027 MB. Available RAM: 654 MB
+
+
+Starting DHCP request ...
+> Phase 3
+ffffffffffff0c5b8f279a64080045100148000000008011399600000000ffffffff004400430134
+<
+ffffffffffffe4a7c58e8d7f080045000116000000004011b12ec0a80801ffffffff004300440102
+NAK received
+> Phase 1
+ffffffffffff0c5b8f279a64080045100148000000008011399600000000ffffffff004400430134
+<
+0c5b8f279a64e4a7c58e8d7f08004500013e000000004011b106c0a80801ffffffff00430044012a
+OFFER received
+> Phase 3
+e4a7c58e8d7f0c5b8f279a64080045100148000000008011399600000000ffffffff004400430134
+<
+0c5b8f279a64e4a7c58e8d7f08004500013e000000004011b106c0a80801ffffffff00430044012a
+ACK received
+> Phase 9
+ffffffffffff0c5b8f279a64080600010800060400010c5b8f279a64c0a80864000000000000c0a8
+<  (ARP, connection confirmed)
+0c5b8f279a64e4a7c58e8d7f08060001080006040002e4a7c58e8d7fc0a808010c5b8f279a64c0a8
+Local IP: 192.168.8.100/24
+ Peer IP: 192.168.8.1
+    DNS1: 192.168.8.1
+    DNS2: 
+
+Send initial IP packet ...
+First IP packet received - we are online
+
+End of DHCP negotiation
+VPN setup complete
+VPN network device is up
+Jan 1, 2018 8:56:08 AM
+
+Total RAM: 1027 MB. Available RAM: 626 MB
+
+Network notification accepted after 0 ms
+
+Connection is ready

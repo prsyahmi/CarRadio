@@ -1,0 +1,22 @@
+#/init.kaa.rc
+
+# define service, use executable here if script not needed
+service kaa /system/bin/keepaliveaudio
+    class main
+    user root
+    group misc audio
+    # don't start unless explicitly asked to
+    # disabled
+
+    # only execute once, don't restart if exited
+    # don't add if you want to restart service when killed
+    #oneshot
+
+    # run with unrestricted SELinux context to avoid avc denials
+    # it's required if SELinux is enforcing and service needs access
+    # to some system resources not allowed by default sepolicy
+    seclabel u:r:magisk:s0
+
+# start the service when boot is completed
+#on property:sys.boot_completed=1
+#    start kaa
