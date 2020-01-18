@@ -34,7 +34,7 @@ static SLAndroidSimpleBufferQueueItf bqPlayerBufferQueue;
 static SLMuteSoloItf bqPlayerMuteSolo;
 static SLVolumeItf bqPlayerVolume;
 
-#define BUFFER_SIZE 512
+#define BUFFER_SIZE 2048
 #define BUFFER_SIZE_IN_SAMPLES (BUFFER_SIZE / 2)
 
 // Double buffering.
@@ -64,6 +64,8 @@ static void bqPlayerCallback(SLAndroidSimpleBufferQueueItf bq, void *context) {
   curBuffer ^= 1;  // Switch buffer
   // Render to the fresh buffer
   //audioCallback(buffer[curBuffer], BUFFER_SIZE_IN_SAMPLES);
+  
+  //usleep(100000);
 }
 
 // create the engine and output mix objects
@@ -151,95 +153,11 @@ extern "C" void OpenSLWrap_Shutdown() {
   }
 }
 
-
-static void skeleton_daemon()
-{
-    pid_t pid;
-
-    /* Fork off the parent process */
-    pid = fork();
-
-    /* An error occurred */
-    if (pid < 0)
-        exit(EXIT_FAILURE);
-
-    /* Success: Let the parent terminate */
-    if (pid > 0)
-        exit(EXIT_SUCCESS);
-
-    /* On success: The child process becomes session leader */
-    if (setsid() < 0)
-        exit(EXIT_FAILURE);
-
-    /* Catch, ignore and handle signals */
-    //TODO: Implement a working signal handler */
-    signal(SIGCHLD, SIG_IGN);
-    signal(SIGHUP, SIG_IGN);
-
-    /* Fork off for the second time*/
-    pid = fork();
-
-    /* An error occurred */
-    if (pid < 0)
-        exit(EXIT_FAILURE);
-
-    /* Success: Let the parent terminate */
-    if (pid > 0)
-        exit(EXIT_SUCCESS);
-
-    /* Set new file permissions */
-    umask(0);
-
-    /* Change the working directory to the root directory */
-    /* or another appropriated directory */
-    chdir("/");
-
-    /* Close all open file descriptors */
-    int x;
-    for (x = sysconf(_SC_OPEN_MAX); x>=0; x--)
-    {
-        close (x);
-    }
-
-    /* Open the log file */
-    //openlog ("keepaliveaudio", LOG_PID, LOG_DAEMON);
-}
-
-void create_process()
-{
-    int exit_code;
-    if(fork() == 0)
-    {
-        //OpenSLWrap_Init();
-        printf("exec start\n");
-        char* argv[] = {"./keepaliveaudio", "1", "&", 0};
-        execv("./keepaliveaudio", argv);
-        printf("exec done\n");
-    }
-    else
-    {
-        wait(&exit_code);
-        if(WIFEXITED(exit_code))
-        {
-            /* Program terminated with exit */
-            /* If you want, you could decode exit code here using
-               WEXITSTATUS and you can start program again.
-            */
-            return;
-        }
-        else
-        {
-            /* Program didn't terminated with exit, restart */
-            create_process();
-        }
-    }
-}
-
 int main(int argc, char* argv[])
 {
     
     for (unsigned i =0; i < BUFFER_SIZE; i++) {
-      buffer[2][i] = 0;//32768 - ((i % 100) * 660);
+      buffer[0][i] = 0;//32768 - ((i % 100) * 660);
       buffer[1][i] = 0;//32768 - ((i % 100) * 660);
     }
     
@@ -247,7 +165,7 @@ int main(int argc, char* argv[])
     
     //skeleton_daemon();
     //if (argc > 1) {
-        printf("Running...\n", argc);
+        printf("Running...\n");
         OpenSLWrap_Init();
         while(1) sleep(1);
     //    return 0;
