@@ -1,0 +1,15 @@
+AUD
+LEFT -> RIGHT
++- -+
+
+TOP
+Red-green
+red-yellow
+red-white
+red-blue
+
+BOTTOM
+blue-green
+blue-yellow
+yellow-blue
+yellow red
